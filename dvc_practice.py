@@ -11,6 +11,9 @@ df = pd.DataFrame(data)
 # adding new data 1
 new_row = {'Name':'Kiran','Age':27,'City':'Chennai'}
 df.loc[len(df.index)] = new_row
+# adding new data 2
+new_row_2 = {'Name':'Nandu','Age':22,'City':'Amaravathi'}
+df.loc[len(df.index)] = new_row_2
 data_dir = 'Data'
 os.makedirs(data_dir,exist_ok=True)
 file_path = os.path.join(data_dir,'Sample_data.csv')
