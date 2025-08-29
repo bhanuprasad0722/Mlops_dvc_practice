@@ -1,0 +1,16 @@
+import pandas as pd 
+import os 
+
+data = {
+    'Name' : ['Bhanu','Vikas','Hemanth'],
+    'Age' : [23,22,21],
+    'City' : ['Hyd','Hyd','Mumbai']
+}
+
+df = pd.DataFrame(data)
+data_dir = 'Data'
+os.makedirs(data_dir,exist_ok=True)
+file_path = os.path.join(data_dir,'Sample_data.csv')
+df.to_csv(file_path,index=False)
+
+print(f"sample data created at location {file_path}")
