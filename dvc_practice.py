@@ -8,6 +8,9 @@ data = {
 }
 
 df = pd.DataFrame(data)
+# adding new data 1
+new_row = {'Name':'Kiran','Age':27,'City':'Chennai'}
+df.loc[len(df.index)] = new_row
 data_dir = 'Data'
 os.makedirs(data_dir,exist_ok=True)
 file_path = os.path.join(data_dir,'Sample_data.csv')
